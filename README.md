@@ -95,7 +95,7 @@ cd agapi</code></pre>
 <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for details.</p>
 
 <h2 style="color:#4A148C;">Contact</h2>
-<p>For any questions or suggestions, please email <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+<p>For any questions or suggestions, please email <a href="haptech0223@gmail.com">your.email@example.com</a>.</p>
 
 </body>
 </html>
