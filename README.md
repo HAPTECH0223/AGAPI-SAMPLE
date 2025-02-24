@@ -81,7 +81,6 @@ cd agapi</code></pre>
 
 <h2 style="color:#4A148C;">Demo Video</h2>
 <p>A short demo video (2-5 minutes) showcasing the app's functionality is available <a href="#" target="_blank">here</a>.</p>
-<p><i>(Update the link once you have the demo video hosted.)</i></p>
 
 <h2 style="color:#4A148C;">Future Enhancements</h2>
 <ul>
