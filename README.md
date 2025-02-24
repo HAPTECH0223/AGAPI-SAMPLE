@@ -1,9 +1,8 @@
-# AGAPI-SAMPLE
+# Agapi Follow-Up Generator
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Agapi Follow-Up Generator</title>
 </head>
 <body>
 
