@@ -1,4 +1,4 @@
-# Agapi Follow-Up Generator
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
