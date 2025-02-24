@@ -42,7 +42,6 @@ cd agapi</code></pre>
     <b>Set Up the OpenAI API Key:</b>
     <ul>
       <li>Open the Dart file where the API call is made (e.g., <code>lib/main.dart</code>).</li>
-      <li>Replace <code>'YOUR_OPENAI_API_KEY'</code> with your actual OpenAI API key.</li>
       <li>For a more secure approach, consider using environment variables or secure storage.</li>
     </ul>
   </li>
