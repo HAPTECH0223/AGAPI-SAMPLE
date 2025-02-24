@@ -88,8 +88,6 @@ cd agapi</code></pre>
   <li><b>Secure API Storage:</b> Integrate secure methods for storing API keys.</li>
 </ul>
 
-<h2 style="color:#4A148C;">License</h2>
-<p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for details.</p>
 
 <h2 style="color:#4A148C;">Contact</h2>
 <p>For any questions or suggestions, please email <a href="haptech0223@gmail.com">haptech0223@gmail.com</a>.</p>
