@@ -1,96 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Interactive Spline + AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #333;
+    }
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    pre {
+      background: #efefef;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
-
-<h1 style="color:#4A148C;">Agapi Follow-Up Generator</h1>
-<p>A modern, mobile-friendly Flutter app that generates follow-up questions from user statements using the OpenAI API. This app features a sleek UI built with Material 3 and follows best practices for a clean and intuitive user experience.</p>
-
-<h2 style="color:#4A148C;">Features</h2>
-<ul>
-  <li><b>User-Friendly Interface:</b> Minimal and modern design with Material 3 styling.</li>
-  <li><b>Input & Output:</b> Allows users to enter a statement and view a generated follow-up question.</li>
-  <li><b>AI Integration:</b> Utilizes the OpenAI API to generate dynamic follow-up questions.</li>
-  <li><b>Responsive Design:</b> Mobile-first layout ensuring accessibility on various devices.</li>
-  <li><b>Error Handling:</b> Displays friendly error messages in case of network or API issues.</li>
-</ul>
-
-<h2 style="color:#4A148C;">Getting Started</h2>
-
-<h3 style="color:#4A148C;">Prerequisites</h3>
-<ul>
-  <li><a href="https://flutter.dev/docs/get-started/install" target="_blank">Flutter SDK</a> (version 3.7.0 or higher)</li>
-  <li>An IDE or code editor (e.g., VS Code, Android Studio)</li>
-  <li>A device or emulator to run the app</li>
-</ul>
-
-<h3 style="color:#4A148C;">Setup Instructions</h3>
-<ol>
-  <li>
-    <b>Clone the Repository:</b>
-    <pre><code>git clone https://github.com/yourusername/agapi.git
-cd agapi</code></pre>
-  </li>
-  <li>
-    <b>Install Dependencies:</b>
-    <pre><code>flutter pub get</code></pre>
-  </li>
-  <li>
-    <b>Set Up the OpenAI API Key:</b>
-    <ul>
-      <li>Open the Dart file where the API call is made (e.g., <code>lib/main.dart</code>).</li>
-      <li>For a more secure approach, consider using environment variables or secure storage.</li>
-    </ul>
-  </li>
-  <li>
-    <b>Run the App:</b>
-    <pre><code>flutter run</code></pre>
-  </li>
-</ol>
-
-<h2 style="color:#4A148C;">Project Structure</h2>
-<ul>
-  <li><code>lib/main.dart</code>: Contains the main app code, UI components, and API integration logic.</li>
-  <li><code>pubspec.yaml</code>: Contains project dependencies and configurations.</li>
-  <li>Other standard Flutter directories for assets, tests, etc.</li>
-</ul>
-
-<h2 style="color:#4A148C;">Implementation Details</h2>
-<h3 style="color:#4A148C;">UI/UX</h3>
-<ul>
-  <li>The app uses Material 3 for a contemporary look.</li>
-  <li>Utilizes <code>Card</code> widgets for the text input and result display.</li>
-  <li>A <code>SingleChildScrollView</code> ensures content is accessible on all screen sizes.</li>
-</ul>
-
-<h3 style="color:#4A148C;">Networking</h3>
-<ul>
-  <li>The app makes HTTP POST requests to the OpenAI API using the <code>http</code> package.</li>
-  <li>Handles loading states with a <code>CircularProgressIndicator</code>.</li>
-</ul>
-
-<h3 style="color:#4A148C;">Error Handling</h3>
-<ul>
-  <li>Provides user-friendly error messages when the API request fails.</li>
-</ul>
-
-<h2 style="color:#4A148C;">Demo Video</h2>
-<p>A short demo video (2-5 minutes) showcasing the app's functionality is available <a href="#" target="_blank">here</a>.</p>
-
-<h2 style="color:#4A148C;">Future Enhancements</h2>
-<ul>
-  <li><b>Rule-Based Fallback:</b> Implement a rule-based system if the AI API is unavailable.</li>
-  <li><b>Enhanced Error Handling:</b> Improve error messages and retry logic.</li>
-  <li><b>User Settings:</b> Allow customization of parameters like temperature and max tokens.</li>
-  <li><b>Secure API Storage:</b> Integrate secure methods for storing API keys.</li>
-</ul>
-
-
-<h2 style="color:#4A148C;">Contact</h2>
-<p>For any questions or suggestions, please email <a href="haptech0223@gmail.com">haptech0223@gmail.com</a>.</p>
-
+  <h1>Interactive Spline + AI</h1>
+  <p>Hello, I'm [Your Name]. This repository contains the source code for a mobile-friendly web app I built as a take-home task for Agapi. The app allows users to input a statement and then generates a follow-up question using AI.</p>
+  
+  <p>The key features of the app include:</p>
+  <ul>
+    <li>A clean, minimal UI built with Flutter for a smooth cross-platform mobile experience.</li>
+    <li>An interactive 3D background rendered via Spline Viewer (see <code>spline_interactive.html</code>), which adds a dynamic visual element.</li>
+    <li>AI-powered follow-up question generation using the OpenAI GPT-4 API (configured in <code>follow_up_spline_page.dart</code>).</li>
+    <li>Custom typography using Google Fonts (Share Tech Mono) for a modern, tech-inspired look.</li>
+  </ul>
+  
+  <p>Here's a brief overview of the technologies and design choices I used:</p>
+  <ul>
+    <li><strong>Flutter:</strong> Chosen for its efficient cross-platform development, ensuring that the app works seamlessly on both Android and iOS devices.</li>
+    <li><strong>Spline Viewer:</strong> Integrated via a local HTML file (<code>spline_interactive.html</code>) to display an immersive 3D scene as the app's background.</li>
+    <li><strong>OpenAI GPT-4 API:</strong> Utilized to process the user's input statement and generate an engaging follow-up question.</li>
+    <li><strong>Google Fonts:</strong> The Share Tech Mono font adds a distinctive aesthetic to the UI.</li>
+  </ul>
+  
+  <p>To get started with the project locally, follow these steps:</p>
+  <ol>
+    <li><strong>Clone the repository:</strong>
+      <pre>git clone &lt;repository_url&gt;
+cd &lt;repository_directory&gt;</pre>
+    </li>
+    <li><strong>Install dependencies:</strong>
+      <pre>flutter pub get</pre>
+    </li>
+    <li><strong>Setup assets:</strong> Make sure the <code>spline_interactive.html</code> file is in the <code>assets</code> folder and referenced in your <code>pubspec.yaml</code> file.</li>
+    <li><strong>Configure the API key:</strong> Replace the placeholder OpenAI API key in <code>follow_up_spline_page.dart</code> with your actual key.</li>
+    <li><strong>Run the app:</strong>
+      <pre>flutter run</pre>
+    </li>
+  </ol>
+  
+  <p>You can also check out a demo video of the app in action here:</p>
+  <p><a href="https://drive.google.com/drive/folders/15Mp_CiWGuIJEcmgP-wZc394fTBjb9jw-?usp=sharing" target="_blank">Demo Video</a></p>
+  
+  <p>Thanks for taking a look at my project. Feel free to explore the code and share any feedback you might have!</p>
 </body>
 </html>
