@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Load the Spline Viewer library -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.69/build/spline-viewer.js"></script>
+
+  <!-- Load Share Tech Mono from Google Fonts -->
+  <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+  />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000; /* Black background behind Spline */
+      overflow: hidden;      /* Hide scrollbars */
+    }
+
+    /* Spline viewer fills the screen */
+    #splineContainer {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: #000;
+    }
+
+    /* Centered overlay text using Share Tech Mono */
+    #overlayTypedText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 24px;
+      color: white;
+      pointer-events: none; /* So clicks pass through to Spline */
+      font-family: 'Share Tech Mono', monospace;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Spline Viewer with your updated scene URL -->
+<spline-viewer
+        id="splineContainer"
+        url="https://prod.spline.design/l3s2VzgS7-o1SxCh/scene.splinecode"
+        style="width: 100%; height: 100%; display: block;">
+</spline-viewer>
+
+<!-- Default overlay text in the center -->
+<div id="overlayTypedText">Press to generate</div>
+
+<script>
+  // Listen for pointerdown events on the Spline viewer.
+  const splineViewer = document.getElementById('splineContainer');
+  splineViewer.addEventListener('pointerdown', () => {
+    if (window.FluWebViewChannel) {
+      window.FluWebViewChannel.postMessage(
+        JSON.stringify({ action: 'text_clicked' })
+      );
+    }
+  });
+
+  // Called by Flutter to update the overlay text.
+  window.updateSplineText = function(newText) {
+    const overlay = document.getElementById('overlayTypedText');
+    const oldText = overlay.innerHTML;
+    let i = oldText.length;
+    function deleteOne() {
+      if (i > 0) {
+        i--;
+        overlay.innerHTML = oldText.substring(0, i);
+        setTimeout(deleteOne, 50);
+      } else {
+        let j = 0;
+        function typeOne() {
+          if (j < newText.length) {
+            overlay.innerHTML += newText.charAt(j);
+            j++;
+            setTimeout(typeOne, 50);
+          }
+        }
+        typeOne();
+      }
+    }
+    deleteOne();
+  }
+</script>
+</body>
+</html>
