@@ -4,7 +4,7 @@
 </head>
 <body>
   <h1>Take home task</h1>
-  <p>This repository contains the source code for a mobile-friendly web app I built as a take-home task for Agapi. The app allows users to input a statement and then generates a follow-up question using AI.</p>
+  <p> The app allows users to input a statement and then generates a follow-up question using AI.</p>
   
   <p>The key features of the app include:</p>
   <ul>
